@@ -1,0 +1,28 @@
+	package yeon;
+
+import java.util.Scanner;
+
+import javax.swing.plaf.synth.SynthSliderUI;
+
+public class Yeon {
+
+
+	 
+	public static void main(String[] args) {
+		
+		
+		Scanner sc = new Scanner(System.in);
+		
+		
+		int a = sc.nextInt();
+		System.out.println(a);
+		if (a%2==0)
+			System.out.println("짝수");
+			else
+				System.out.println("홀수");
+			
+			
+	
+	}
+
+}
