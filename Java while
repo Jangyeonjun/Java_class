@@ -1,0 +1,32 @@
+/**
+ * 
+ */
+package yeon;
+
+/**
+ * @author user
+ *
+ */
+public class Y {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+	int a = 1;
+	int b = 1;
+	
+	while ( a <= 10){
+		b = 1;
+		while(b <= 10) {
+			System.out.println("*");
+			
+			a++;
+		} 
+	
+		b++;
+		}
+
+		}	
+
+		}
