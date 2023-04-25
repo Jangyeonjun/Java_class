@@ -1,0 +1,28 @@
+
+ 
+package rjsdn;
+
+import java.util.Scanner;
+
+public class Rjadn {
+	public static void main(String[] args) {
+		//구구단	
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("몇단 보고싶어");
+		
+		int a = sc.nextInt();
+		int d = sc.nextInt();
+		
+		
+		for(int i =1; i<=d; i++) {
+		System.out.println(a+" * "+i+" = "+(a*i));
+		}
+	}
+	
+	
+		
+	
+}
+
