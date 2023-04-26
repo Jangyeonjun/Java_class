@@ -1,0 +1,38 @@
+/**
+ * 
+ */
+package kjawej;
+
+import java.text.BreakIterator;
+import java.util.Scanner;
+
+import javax.swing.plaf.synth.SynthScrollBarUI;
+
+/**
+ * @author user
+ *
+ */
+public class To {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("숫자하나만 입력");
+		int a = sc.nextInt();
+		int j = 0 ;
+		for(int i = 1; i<=a; i++) {
+			if(i%2!=0 || i%3!=0) {
+				j = j+i;
+			}
+		}
+		System.out.println(j);
+		
+		
+		
+		
+	} 
+
+}
