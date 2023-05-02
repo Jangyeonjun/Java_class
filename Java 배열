@@ -1,0 +1,47 @@
+package sjfs;
+
+import java.util.Scanner;
+
+public class SSS {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int [] a = new int[100];
+		int b [] = new int [100];
+		int c = 0;
+		while(c<5) {
+			
+			
+			System.out.println("값을 입력받는다");
+			a[c] = sc.nextInt();
+			c++;
+			
+			
+			
+			
+			
+			
+			
+		}
+		
+		System.out.println(a[0]);
+		System.out.println(a[1]);
+		System.out.println(a[2]);
+		System.out.println(a[3]);
+		System.out.println(a[4]);
+		System.out.println(a[5]);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}
