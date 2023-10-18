@@ -1,0 +1,29 @@
+def backjak_gmae():#카드를 랜덤으로 뽑는다
+    import random
+
+    list = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+    my = random.sample(list, 2)
+    dealer = random.sample(list,2)
+    dealer_card = random.choice(dealer) 
+    print("첫번째 플래이어 카드는",my,"입니다")  
+    print("딜러카드는",dealer_card,"입니다")
+    def card_set(card_score):
+        sum = 0
+        for card in card_score:
+            sum+=card
+        return sum
+    
+    my_score=card_set(my)
+    dealer_score = card_set(dealer)
+    print(my_score)
+    print(dealer_score)
+
+start = True
+while start:
+    start_1 = input("시작할거면 M 포기할거면 N ")
+    if start_1 == "M":
+        print("게임시작")
+        backjak_gmae()
+    else:
+        print("포기")
+        start = False
