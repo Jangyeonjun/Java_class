@@ -1,0 +1,76 @@
+import random
+import sys
+
+def backjak_gmae():#카드를 랜덤으로 뽑는다
+
+    list = [11,2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+    my = random.sample(list, 2)
+    dealer = random.sample(list,2)
+    dealer_card = random.choice(dealer) 
+    print("첫번째 플래이어 카드는",my,"입니다")  
+    print("딜러카드는",dealer_card,"입니다")
+    def card_set(card_score):
+        sum = 0
+        for card in card_score:
+            sum+=card
+        return sum
+    
+    my_score=card_set(my)
+    dealer_score = card_set(dealer)
+    print("플래이어 카드 점수는",my_score)
+
+    while dealer_score<17:
+        plus=random.sample(list, 1)
+        dealer_score += plus[0]
+        print("딜러의 점수는",dealer_score)
+        
+
+    if dealer_score>21:
+        print("-"*30)
+        print("플래이어 승리")
+        sys.exit()
+    a = True
+    while a:
+        my_score_puls = input("카드를 더 뽑겠습니까? 더 뽑을거면 G 아니면 N")
+        if my_score_puls == "G":
+            my_plus=random.sample(list,1)
+            my_score+=my_plus[0]
+            print("플래이어 점수는",my_score)
+        if my_score>21:
+            print("-"*30)
+            print("21을 넘어서 딜러 승리")
+            sys.exit()
+        if my_score_puls=="N":
+            print("그대로")
+            a =False
+        else:
+            print("다시입력")
+# -----------------------------------------------------------------------------------
+    if my_score==dealer_score:
+        print("-"*30)
+        print("무승부")
+        if my_score==21:
+            print("-"*30)
+            print("플래이어 승리")
+    elif my_score==dealer_score:
+        if dealer_score==21:
+            print("-"*30)
+            print("딜러 승리")
+    if my_score>dealer_card:
+        print("-"*30)
+        print("플래이어 승리")
+    if my_score<dealer_card:
+        print("-"*30)
+        print("딜러 승리")
+    sys.exit()
+        
+       
+start = True
+while start:
+    start_1 = input("시작할거면 M 포기할거면 N ")
+    if start_1 == "M":
+        print("게임시작")
+        backjak_gmae()
+    else:
+        print("포기")
+        start = False
