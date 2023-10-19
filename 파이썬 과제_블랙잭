@@ -36,9 +36,12 @@ def backjak_gmae():#카드를 랜덤으로 뽑는다
             my_plus=random.sample(list,1)
             my_score+=my_plus[0]
             print("플래이어 점수는",my_score)
+            
         if my_score>21:
             print("-"*30)
             print("21을 넘어서 딜러 승리")
+            print("딜러 점수",dealer_score)
+            print("플래이어 점수",my_score) 
             sys.exit()
         if my_score_puls=="N":
             print("그대로")
@@ -51,23 +54,27 @@ def backjak_gmae():#카드를 랜덤으로 뽑는다
         print("무승부")
         print("딜러 점수",dealer_score)
         print("플래이어 점수",my_score) 
+        sys.exit()
     elif my_score==21:
         print("-"*30)
         print("플래이어 승리")
         print("딜러 점수",dealer_score)
         print("플래이어 점수",my_score)   
+        sys.exit()
     if my_score==dealer_score:
         if dealer_score==21:
             print("-"*30)
             print("딜러 승리")
             print("딜러 점수",dealer_score)
             print("플래이어 점수",my_score) 
+            sys.exit()
     elif my_score<dealer_card:
         print("-"*30)
         print("플래이어 승리")
         print("딜러 점수",dealer_score)
         print("플래이어 점수",my_score)
-    elif my_score>dealer_card:
+        sys.exit()
+    if my_score>dealer_card:
         print("-"*30)
         print("딜러 승리")
         print("딜러 점수",dealer_score)
