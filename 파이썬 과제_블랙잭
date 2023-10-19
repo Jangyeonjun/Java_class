@@ -2,33 +2,34 @@ import random
 import sys
 
 def backjak_gmae():#카드를 랜덤으로 뽑는다
-
+    #램덥 값 적용
     list = [11,2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
     my = random.sample(list, 2)
     dealer = random.sample(list,2)
     dealer_card = random.choice(dealer) 
     print("첫번째 플래이어 카드는",my,"입니다")  
     print("딜러카드는",dealer_card,"입니다")
+    #점수 합 더하기
     def card_set(card_score):
         sum = 0
         for card in card_score:
             sum+=card
         return sum
-    
+  
+    # 점수 표시
     my_score=card_set(my)
     dealer_score = card_set(dealer)
     print("플래이어 카드 점수는",my_score)
-
     while dealer_score<17:
         plus=random.sample(list, 1)
         dealer_score += plus[0]
         print("딜러의 점수는",dealer_score)
-        
-
+   #딜러가 21을 넘으면 플래이어 승리 
     if dealer_score>21:
         print("-"*30)
         print("플래이어 승리")
         sys.exit()
+   #플래이어가 카드를 더 먹을지 선택
     a = True
     while a:
         my_score_puls = input("카드를 더 뽑겠습니까? 더 뽑을거면 G 아니면 N")
@@ -48,7 +49,7 @@ def backjak_gmae():#카드를 랜덤으로 뽑는다
             a =False
         else:
             print("다시입력")
-# -----------------------------------------------------------------------------------
+    #게임 승리 조건 딜러랑 값을 비교하고 21인사람 또는 숫자가 높은사람이 이긴다
     if my_score==dealer_score:
         print("-"*30)
         print("무승부")
@@ -78,12 +79,9 @@ def backjak_gmae():#카드를 랜덤으로 뽑는다
         print("-"*30)
         print("딜러 승리")
         print("딜러 점수",dealer_score)
-        print("플래이어 점수",my_score)
-        
-        sys.exit()
-    
-  
-       
+        print("플래이어 점수",my_score)        
+        sys.exit()   
+  # 처음에 게임을 시작할지 선택
 start = True
 while start:
     start_1 = input("시작할거면 M 포기할거면 N ")
@@ -92,7 +90,7 @@ while start:
         backjak_gmae()
     elif start_1 == "N":
         print("포기")
-        
+
         start = False
     else :
       print("다시입력")
