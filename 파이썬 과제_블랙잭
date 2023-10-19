@@ -34,7 +34,7 @@ def backjak_gmae():#카드를 랜덤으로 뽑는다
     a = True
     while a:
         my_score_puls = input(" ▶카드를 더 뽑겠습니까? (Y/N) ")
-        if my_score_puls == "Y":
+        if my_score_puls == "Y" or my_score_puls=="y":
             my_plus=random.sample(list,1)
             my_score+=my_plus[0]
             print(" ✅플래이어 점수는",my_score,"입니다 ")
@@ -48,7 +48,7 @@ def backjak_gmae():#카드를 랜덤으로 뽑는다
             print(" ★딜러 ＷＩＮＥＲ★ ")
             print("-"*30)
             sys.exit()
-        if my_score_puls=="N":
+        if my_score_puls=="N" or my_score_puls=="n":
             print(" ◇그대로 진행하겠습니다◇ ")
             a =False
         else:
