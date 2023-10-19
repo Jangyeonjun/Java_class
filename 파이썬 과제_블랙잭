@@ -49,21 +49,33 @@ def backjak_gmae():#카드를 랜덤으로 뽑는다
     if my_score==dealer_score:
         print("-"*30)
         print("무승부")
-        if my_score==21:
-            print("-"*30)
-            print("플래이어 승리")
-    elif my_score==dealer_score:
+        print("딜러 점수",dealer_score)
+        print("플래이어 점수",my_score) 
+    elif my_score==21:
+        print("-"*30)
+        print("플래이어 승리")
+        print("딜러 점수",dealer_score)
+        print("플래이어 점수",my_score)   
+    if my_score==dealer_score:
         if dealer_score==21:
             print("-"*30)
             print("딜러 승리")
-    if my_score>dealer_card:
+            print("딜러 점수",dealer_score)
+            print("플래이어 점수",my_score) 
+    elif my_score<dealer_card:
         print("-"*30)
         print("플래이어 승리")
-    if my_score<dealer_card:
+        print("딜러 점수",dealer_score)
+        print("플래이어 점수",my_score)
+    elif my_score>dealer_card:
         print("-"*30)
         print("딜러 승리")
-    sys.exit()
+        print("딜러 점수",dealer_score)
+        print("플래이어 점수",my_score)
         
+        sys.exit()
+    
+  
        
 start = True
 while start:
@@ -73,4 +85,5 @@ while start:
         backjak_gmae()
     else:
         print("포기")
+        
         start = False
