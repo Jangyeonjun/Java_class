@@ -92,6 +92,7 @@ while start:
         backjak_gmae()
     elif start_1 == "N":
         print("포기")
+        
         start = False
     else :
       print("다시입력")
