@@ -68,13 +68,13 @@ def backjak_gmae():#카드를 랜덤으로 뽑는다
             print("딜러 점수",dealer_score)
             print("플래이어 점수",my_score) 
             sys.exit()
-    elif my_score<dealer_card:
+    elif my_score>dealer_score:
         print("-"*30)
         print("플래이어 승리")
         print("딜러 점수",dealer_score)
         print("플래이어 점수",my_score)
         sys.exit()
-    if my_score>dealer_card:
+    if my_score<dealer_score:
         print("-"*30)
         print("딜러 승리")
         print("딜러 점수",dealer_score)
