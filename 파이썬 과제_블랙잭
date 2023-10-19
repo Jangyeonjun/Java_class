@@ -83,7 +83,8 @@ while start:
     if start_1 == "M":
         print("게임시작")
         backjak_gmae()
-    else:
+    elif start_1 == "N":
         print("포기")
-        
         start = False
+    else :
+      print("다시입력")
