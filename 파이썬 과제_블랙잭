@@ -9,6 +9,8 @@ def backjak_gmae():#카드를 랜덤으로 뽑는다
     dealer_card = random.choice(dealer) 
     print(" #첫번째 플래이어 카드는",my,"입니다 ")  
     print(" #딜러카드는",dealer_card,"입니다 ")
+    
+    
     #점수 합 더하기
     def card_set(card_score):
         sum = 0
@@ -20,6 +22,9 @@ def backjak_gmae():#카드를 랜덤으로 뽑는다
     my_score=card_set(my)
     dealer_score = card_set(dealer)
     print(" ✅플래이어 카드 점수는",my_score,"입니다 ")
+    if my_score==21:
+        print(" ★플래이어 ＷＩＮＥＲ★ ")
+        sys.exit()
     while dealer_score<17:
         plus=random.sample(list, 1)
         dealer_score += plus[0]
