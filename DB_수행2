@@ -1,0 +1,12 @@
+create table teacher_tbl_01(
+t_id number(2) primary key,
+t_name varchar2(20),
+subject varchar2(50),
+club varchar2(30));
+-----------------------------
+nsert into teacher_tbl_01 values
+('1','오현아','알고리즘','자바 프로그래밍');
+insert into teacher_tbl_01 values
+('2','최승남','자료구조','응용 그로그래밍');
+insert into teacher_tbl_01 values
+('3','최지선','논리회로','로봇 프로그래밍');
