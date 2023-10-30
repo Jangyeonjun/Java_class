@@ -1,0 +1,26 @@
+create table student_tbl_01(
+stu_id number(5) primary key,
+stu_name varchar2(20),
+gender varchar2(3),
+phone varchar2(20),
+t_id number(3));
+-------------------------------------
+  create sequence stu_seq
+start with 10101
+increment by 1
+maxvalue 10130
+minvalue 10101
+nocycle;
+-------------------------------------
+insert into student_tbl_01 values
+(stu_seq.nextval,'권창욱','남','010-7777-2222',3);
+insert into student_tbl_01 values
+(stu_seq.nextval,'염주희','여','010-6666-3333',2);
+insert into student_tbl_01 values
+(stu_seq.nextval,'정아영','여','010-5555-4444',1);
+insert into student_tbl_01 values
+(stu_seq.nextval,'김민준','남','010-4444-5555',1);
+insert into student_tbl_01 values
+(stu_seq.nextval,'김현빈','남','010-3333-6666',2);
+insert into student_tbl_01 values
+(stu_seq.nextval,'김수현','남','010-2222-7777',3);
