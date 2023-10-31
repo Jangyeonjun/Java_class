@@ -1,3 +1,4 @@
+
 create table student_tbl_01(
 stu_id number(5) primary key,
 stu_name varchar2(20),
@@ -98,3 +99,8 @@ insert into money_tbl_02 values
 insert into money_tbl_02 values
 ('100004','20160010','3000','1','3000','A007','20200106');
 
+select m.custno 회원번호 ,custname 회원서명 ,substr(phone,10,4) 회원전화 ,sum(price) 가격, to_char(joindate, 'yyyy-mm-dd') 가입날짜,decode(grade, 'A','VIP','B','일반','직원') 고객등급 
+from member_tbl_02 m, money_tbl_02 n
+where m.custno=n.custno
+group by m.custno,custname,phone,joindate,grade
+order by sum(price) desc;
