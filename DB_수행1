@@ -24,7 +24,7 @@ insert into student_tbl_01 values
 (stu_seq.nextval,'김현빈','남','010-3333-6666',2);
 insert into student_tbl_01 values
 (stu_seq.nextval,'김수현','남','010-2222-7777',3);
-------------------------------------------------------------------------------------------------------
+DB수행 ----------------------------------------------------------------------------------------------
 create table member_tbl_02(
 custno number(6) primary key,
 custname varchar2(20),
