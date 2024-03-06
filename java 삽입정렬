@@ -1,0 +1,24 @@
+package ssdfsaf;
+
+import java.util.Arrays;
+
+public class D {
+
+	public static void main(String[] args) {
+		
+		int[] arr = new int[] {31,25,12,22,11};//정렬숫자
+		for (int i =1; i <arr.length; i++) {
+			for (int j = i; j>0; j--) {
+				if(arr[j-1]>arr[j]) {//i값을 뺄수 없어 j에다가 i 값을 넣는다
+					int temp = arr[j-1];
+					arr[j-1]= arr[j];
+					arr[j]=temp;
+				}
+				
+			}
+		}
+		System.out.println(Arrays.toString(arr));
+	
+
+}
+}
