@@ -1,7 +1,0 @@
-print('팅 팅팅팅 탱탱탱 팅팅 탱탱 후라이펜 놀이')
-
-for i in range(5):
- 
-  a = input('이름')
-  b = int(input('정수'))
-  print(a*b)
