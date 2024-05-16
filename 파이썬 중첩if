@@ -1,8 +1,0 @@
-num = int(input())
-if num>3:
-  if num<=7:
-    print("7보다 작거나 같다")
-  else:
-    print("7보다 크다")
-else:
-  print("3보다 작거나 같다")
